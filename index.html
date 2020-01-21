@@ -3,9 +3,12 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="main.js"></script>
     <title>Bricks-Level Editor</title>
   </head>
   <body>
+    <h1>Bricks-Level Editor</h1>
+
     <table>
       <tr>
         <td>
@@ -156,15 +159,22 @@
     </table>
 
     <div class="bt">
-      <button type="button" name="save" class="saveBtn">
+      <button type="button" name="save" class="saveBtn" onclick="saveLevel()">
         Save
       </button>
-      <button type="button" name="load" class="loadBtn">
+      <button type="button" name="load" class="loadBtn" onclick="loadLevel()">
         Load
       </button>
-      <button type="button" name="run" class="runBtn">
-        Run/Test
+      <button type="button" name="run" class="runBtn" onclick="runLevel()">
+        Run!
       </button>
     </div>
+
+    <input type="number" min="0" max="5" id="chooseId" value="" size="4" onchange="updateLayer()">
+
+    <footer>
+      Level Editor for <b><a href="https://play.google.com/store/apps/details?id=com.ElizStudios.PongStars">Pong Stars</b></a>
+      | MIT License <br>© 2020 Eliz Studios, All rights reserved.
+    </footer>
   </body>
 </html>
