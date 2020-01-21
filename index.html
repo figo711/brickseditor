@@ -9,7 +9,8 @@
   <body>
     <h1>Bricks-Level Editor</h1>
 
-    <table>
+    <div class="display_block">
+      <table>
       <tr>
         <td>
           <div class="square">0</div>
@@ -157,6 +158,7 @@
         </td>
       </tr>
     </table>
+    </div>
 
     <div class="bt">
       <button type="button" name="save" class="saveBtn" onclick="saveLevel()">
@@ -170,7 +172,9 @@
       </button>
     </div>
 
+    <div class="togg">
     <input type="number" min="0" max="5" id="chooseId" value="" size="4" onchange="updateLayer()">
+    </div>
 
     <footer>
       Level Editor for <b><a href="https://play.google.com/store/apps/details?id=com.ElizStudios.PongStars">Pong Stars</b></a>
