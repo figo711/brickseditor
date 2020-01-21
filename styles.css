@@ -10,6 +10,13 @@
   border-radius: 4px;
 }
 
+h1 {
+  text-align: center;
+  color: #ecf0f1;
+  font-family: "Sansation";
+  font-size: 35px;
+}
+
 .square:hover {
   background-color: #95a5a6;
 }
@@ -18,11 +25,29 @@
   background-color: #7f8c8d;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #465c73;
+  color: #ecf0f1;
+  text-align: center;
+  font-family: "Sansation";
+}
+
 table {
   margin: 0 auto;
 }
 
 body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Opera and Firefox */
   background-color: #2c3e50;
 }
 
@@ -30,12 +55,13 @@ button {
   position: relative;
   border-radius: 4px;
   border: none;
-  color: white;
-  padding: 15px 32px;
+  padding: 15px 35px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  color: #ecf0f1;
+  font-family: "Sansation";
 }
 
 .saveBtn {
@@ -79,4 +105,12 @@ button {
 
 .bt {
   text-align: center;
+}
+
+#chooseId {
+  position: fixed;
+  left: 1%;
+  right: auto;
+  top: 50%;
+  border: none;
 }
