@@ -40,6 +40,16 @@ table {
   margin: 0 auto;
 }
 
+.togg {
+  background-color: white;
+
+  position: fixed;
+  left: 1%;
+  right: auto;
+  top: 50%;
+  border: none;
+}
+
 body {
   -webkit-touch-callout: none; /* iOS Safari */
   -webkit-user-select: none; /* Safari */
@@ -104,13 +114,6 @@ button {
 }
 
 .bt {
+  margin-top: 3px;
   text-align: center;
-}
-
-#chooseId {
-  position: fixed;
-  left: 1%;
-  right: auto;
-  top: 50%;
-  border: none;
 }
