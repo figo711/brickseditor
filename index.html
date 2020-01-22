@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script type="text/javascript" src="main.js"></script>
     <title>Bricks-Level Editor</title>
   </head>
   <body>
     <h1>Bricks-Level Editor</h1>
 
-    <div class="display_block">
+    <div id="display_block">
       <table>
       <tr>
         <td>
@@ -173,12 +172,17 @@
     </div>
 
     <div class="togg">
-    <input type="number" min="0" max="5" id="chooseId" value="" size="4" onchange="updateLayer()">
+      <div id="title">Tools</div><br>
+      <div id="layerParam">Layer
+        <input type="number" min="1" max="5" id="chooseId" value="1" onchange="updateLayer()">
+      </div>
     </div>
 
     <footer>
       Level Editor for <b><a href="https://play.google.com/store/apps/details?id=com.ElizStudios.PongStars">Pong Stars</b></a>
       | MIT License <br>© 2020 Eliz Studios, All rights reserved.
     </footer>
+
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
