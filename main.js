@@ -1,6 +1,8 @@
 var levelIsValid = false;
-var initLayer = 0;
+var initLayer = 1;
 var map = null;
+
+const layerColorList = ["#ecf0f1", "#EA2027", "#FFC312", "#12CBC4", "#1B1464", "#6F1E51"];
 
 function saveLevel() {
   alert("Save Test");
@@ -19,15 +21,23 @@ function updateLayer() {
   initLayer = i.value;
 }
 
+function checkLayer(layer, i) {
+  if (layerColorList[layer] != null) {
+    map[i].style.color = layerColorList[layer];
+  }
+}
+
 map = document.getElementsByClassName('square')
 
 for (let i = 0; i < map.length; i++) {
   map[i].addEventListener('mousedown', function (event) {
-    if (event.which == 3) {
-      map[i].innerText = 0;
+    var curL = 0;
+
+    if (event.which != 3) {
+      curL = initLayer;
     }
-    else {
-      map[i].innerText = initLayer;
-    }
+
+    map[i].innerText = curL;
+    checkLayer(curL, i);
   });
 }
