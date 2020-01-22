@@ -37,6 +37,7 @@ footer {
 }
 
 table {
+  vertical-align: middle;
   margin: 0 auto;
 }
 
