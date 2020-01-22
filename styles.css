@@ -41,13 +41,29 @@ table {
 }
 
 .togg {
-  background-color: white;
+  background-color: #34495e;
+  text-align: center;
+  height: 59%;
+  width: 25%;
 
-  position: fixed;
-  left: 1%;
-  right: auto;
-  top: 50%;
-  border: none;
+  border-radius: 8px;
+  color: #ecf0f1;
+  font-family: "Sansation";
+
+  position: absolute;
+  top: 14%;
+}
+
+#layerParam {
+}
+
+#layerParam input {
+  padding-left: 25%;
+}
+
+#title {
+  padding-top: 10px;
+  font-size: 25px;
 }
 
 body {
