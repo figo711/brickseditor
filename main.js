@@ -1,5 +1,6 @@
 var levelIsValid = false;
 var initLayer = 0;
+var map = null;
 
 function saveLevel() {
   alert("Save Test");
@@ -18,11 +19,15 @@ function updateLayer() {
   initLayer = i.value;
 }
 
-var ele = document.getElementsByClassName('square');
+map = document.getElementsByClassName('square')
 
-ele.forEach((item) => {
-  /*item.addEventListener('click', function (event) {
-    alert("Lol")
-  });*/
-  alert(item);
-});
+for (let i = 0; i < map.length; i++) {
+  map[i].addEventListener('mousedown', function (event) {
+    if (event.which == 3) {
+      map[i].innerText = 0;
+    }
+    else {
+      map[i].innerText = initLayer;
+    }
+  });
+}
