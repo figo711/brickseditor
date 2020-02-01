@@ -77,6 +77,10 @@ table {
   right: 1%;
 }
 
+.toggle button {
+  background-color: black;
+}
+
 #iodata {
   height: 65%;
   width: 92%;
