@@ -166,14 +166,14 @@
       <button type="button" name="load" class="loadBtn" onclick="loadLevel()">
         Load
       </button>
-      <button type="button" name="run" class="runBtn" onclick="runLevel()">
-        Run!
+      <button type="button" name="clear" class="clearBtn" onclick="clearLevel()">
+        Clear
       </button>
     </div>
 
     <div class="togg">
       <div id="title">Tools</div><br>
-      <div id="layerParam">Layer
+      <div id="layerParam">Layer (0-8)
         <input type="number" min="1" max="8" id="chooseId" value="1" oninput="updateLayer()">
       </div>
       <hr>
@@ -193,7 +193,7 @@
     <div class="togg2">
       <div id="title">I/O Data</div><br>
       <textarea id="iodata" name="data">Empty</textarea>
-      <button type="button" name="copy" class="copyBtn">Copy</button>
+      <button type="button" name="copy" class="copyBtn" onclick="copy_text()">Copy</button>
 
     <footer>
       Level Editor for <b><a href="https://play.google.com/store/apps/details?id=com.ElizStudios.PongStars">Pong Stars</b></a>
