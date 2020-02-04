@@ -159,15 +159,15 @@ button {
   color: #f1c40f;
 }
 
-.runBtn {
+.clearBtn {
   background-color: #e74c3c;
 }
 
-.runBtn:hover {
+.clearBtn:hover {
   background-color: #c0392b;
 }
 
-.runBtn:active {
+.clearBtn:active {
   background-color: white;
   color: #e74c3c;
 }
