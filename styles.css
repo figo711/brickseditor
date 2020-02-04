@@ -34,7 +34,7 @@ footer {
   color: #ecf0f1;
   text-align: center;
   font-family: "Sansation";
-  height: 5%;
+  height: 6%;
 }
 
 hr {
@@ -188,4 +188,13 @@ button {
 .bt {
   margin-top: 3px;
   text-align: center;
+}
+
+#version {
+  left: 0%;
+  bottom: 0%;
+  width: 10%;
+  text-align: center;
+  font-family: "Consolas";
+  height: 25%;
 }
