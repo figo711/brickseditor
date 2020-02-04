@@ -1,4 +1,3 @@
-var levelIsValid = false;
 var initLayer = 1;
 var map = null;
 
@@ -14,10 +13,7 @@ function saveLevel() {
       return;
     }
 
-    var d = decToHex(n);
-    alert(d);
-    d = btoa(d);
-    ioenter.innerText = d;
+    ioenter.value = n.join("");
   }
 }
 
@@ -41,35 +37,6 @@ function checkIfLevelIsValid() {
   return true;
 }
 
-function decToHex(n) {
-  var q = 10;
-  var r = '';
-  var arr = '';
-  while (q != 0) {
-    q = Math.round(n / 16);
-    n = q;
-    r = (n % 16).toString(16);
-    arr += r;
-    //alert(q);
-  }
-
-  arr = arr.split("").reverse().join("");
-  return arr;
-}
-
-function hexToDec(h) {
-  var sums = 0;
-  var power_zone = h.toString().length;
-  for (let i = 0; i < h.toString().length; i++) {
-    var p = Math.pow(16, power_zone-1);
-
-    var m = parseInt(h[i], 16) * p;
-    sums += m;
-    power_zone--;
-  }
-  return sums.toString();
-}
-
 function htmlMapToNmap(m) {
   var res = [];
 
@@ -81,15 +48,45 @@ function htmlMapToNmap(m) {
 }
 
 function loadLevel() {
-  if (ioenter.innerText != "") {
-    var d = atoa(ioenter.innerText);
-    var n = hexToDec(d);
-    alert(d);
+  if (ioenter.value != "") {
+    let t = ioenter.value;
+
+    if (t.length > 42) {
+      alert("Load Error: Length of <" +t+ "> must not exceed beyond 42.");
+      return;
+    }
+
+    for (let i = 0; i < t.length; i++) {
+      if (isNaN(parseInt(t[i]))) {
+        alert("Load Error: This '" +t[i]+ "' is not a number.");
+        break;
+      }
+      else if (parseInt(t[i]) < 0 || parseInt(t[i]) > 8) {
+        alert("Load Error: " + t[i]+ " must be between 0 and 8.");
+        break;
+      }
+
+      map[i].innerText = t[i];
+      checkLayer(t[i], i);
+    }
   }
 }
 
-function runLevel() {
-  alert("Run Test");
+function copy_text() {
+  ioenter.select();
+  ioenter.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  document.getElementsByName('copy')[0].innerText = "Copied";
+  setTimeout(function() {
+      document.getElementsByName('copy')[0].innerText = "Copy";
+  }, 2000);
+}
+
+function clearLevel() {
+  for (let i = 0; i < 42; i++) {
+    map[i].innerText = 0;
+    checkLayer(0, i);
+  }
 }
 
 function updateLayer() {
